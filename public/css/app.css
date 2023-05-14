@@ -6,6 +6,22 @@
   letter-spacing: 0;
 }
 
+*::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 5px;
+  background: #272e35;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #4895efbb;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #4895ef;
+}
+
 html,
 body,
 .viewport {
