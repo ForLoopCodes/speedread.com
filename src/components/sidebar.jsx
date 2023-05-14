@@ -5,6 +5,7 @@ export default function Sidebar(props) {
     <div className="sidebar">
       <ul className="logo">
         <li
+          title="Speedread"
           onClick={() => {
             props.setActiveTab("");
             window.history.pushState({}, "", "/");

@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+Mono:400,500,700&display=swap");
 
 * {
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   font-family: "noto sans mono";
+  letter-spacing: 0;
 }
 
 html,
@@ -15,8 +16,9 @@ body,
 }
 
 .body {
-  border: 1px solid red;
-  width: 762px;
+  max-width: 880px;
+  width: 60%;
+  min-width: 720px;
   min-height: 100px;
   position: absolute;
   top: 0%;
@@ -26,8 +28,98 @@ body,
 }
 
 .body h1 {
-  font-size: 18px;
+  font-size: 22px;
   color: #8792a2;
-  font-weight: 400;
+  margin-top: 15px;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.body h2 {
+  font-size: 15px;
+  color: #8792a2;
+  font-weight: 600;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.body textarea::placeholder {
+  color: #8792a2;
+}
+
+.body textarea {
+  width: 100%;
+  height: 500px;
+  background: #272e35;
+  border: 0;
+  color: #cbd0df;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.body textarea:focus {
+  box-shadow: inset 0 0 2px #4895ef;
+  transition: 0.2s ease;
+}
+
+.body input::placeholder {
+  color: #8792a2;
+}
+
+.body input {
+  width: calc(32% - 20px);
+  height: 20px;
+  background: #272e35;
+  border: 0;
+  color: #cbd0df;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  resize: none;
+  font-weight: 500;
+  outline: none;
+}
+
+.body input:focus {
+  box-shadow: inset 0 0 2px #4895ef;
+  transition: 0.2s ease;
+}
+
+.body button {
+  width: 32%;
+  height: 40px;
+  background: #272e35;
+  font-weight: 600;
+  border: 0;
+  color: #cbd0df;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.body button:hover {
+  background: #4895ef;
+}
+
+.multiContainer {
+  display: flex;
+  width: calc(100% + 20px);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.body a {
+  color: #8792a2;
+  font-weight: 500;
+}
+
+.body a:hover {
+  color: #4895ef;
 }

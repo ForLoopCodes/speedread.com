@@ -6,6 +6,7 @@
   width: 87px;
   padding: 20px 0;
   display: flex;
+  z-index: 5;
   flex-direction: column;
   color: #cbd0df;
   background: #272e35;
@@ -83,9 +84,11 @@
 @media screen and (max-width: 1000px) {
   .sidebar {
     width: calc(100% - 40px);
-    height: calc(100vh / 12.5);
+    height: calc(10vh);
     flex-direction: row;
     justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #2d333b77;
     align-items: center;
     padding: 0 20px;
   }
@@ -111,8 +114,8 @@
   }
 
   .sidebar svg {
-    width: calc(100vh / 40);
-    height: calc(100vh / 40);
+    width: calc(100vh / 35);
+    height: calc(100vh / 35);
     margin: 0;
   }
 
