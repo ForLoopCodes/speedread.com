@@ -40,6 +40,7 @@ body,
   top: 0%;
   left: 50%;
   transform: translate(-50%, 0%);
+  padding-bottom: 20px;
   padding-top: 20px;
 }
 
@@ -138,4 +139,11 @@ body,
 
 .body a:hover {
   color: #4895ef;
+}
+
+.hiddenBody {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
 }
