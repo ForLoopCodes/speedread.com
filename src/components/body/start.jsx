@@ -8,21 +8,25 @@ export default function Start(props) {
   const [liveWord, setLiveWord] = useState("");
 
   useEffect(() => {
-    if (isReading) {
-      let words = readContent.split(" ");
-      let i = 0;
-      let interval = setInterval(() => {
+    let i = 0;
+    let words = isReading ? readContent.split(" ") : [""];
+    let interval = setInterval(() => {
+      if (!isReading) {
+        clearInterval(interval);
+        setIsReading(false);
+        console.log("cleared", isReading);
+        i = 0;
+      } else {
         if (i < words.length) {
           setLiveWord(words[i]);
           i++;
+          console.log("working", words, i, isReading);
         } else {
           clearInterval(interval);
           setIsReading(false);
         }
-      }, 60000 / readSpeed);
-    } else {
-      setLiveWord("");
-    }
+      }
+    }, 60000 / readSpeed);
   }, [isReading, readSpeed, readContent]);
 
   return (
@@ -74,7 +78,14 @@ export default function Start(props) {
           >
             Start
           </button>
-          <button>Speed-fade</button>
+          <button
+            onClick={() => {
+              setIsReading(true);
+              setReadingMode("speed-fade");
+            }}
+          >
+            Speed-fade
+          </button>
           <button>Full View (GPT)</button>
         </div>
         <h2>
